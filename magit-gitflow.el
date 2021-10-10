@@ -40,13 +40,11 @@
 
 (defvar magit-gitflow-mode-lighter " GitFlow")
 
-(defvar magit-gitflow-popup-key "k")
-(defvar magit-gitflow-popup-quit "q")
+(defvar magit-gitflow-popup-key "C-f")
 
 (defvar magit-gitflow-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd magit-gitflow-popup-key) 'magit-gitflow-popup)
-		(define-key map (kbd magit-gitflow-popup-quit)  'magit-popup-quit) ;; esto es para magit/transient
     map))
 
 (define-minor-mode magit-gitflow-mode
